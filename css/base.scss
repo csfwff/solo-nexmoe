@@ -19,13 +19,15 @@
 @import "../../../scss/nprogress";
 @import "../../../scss/usite";
 @import "../../../scss/toc";
-@import "vditor/src/assets/scss/classic";
+@import "node_modules/vditor/src/assets/scss/classic";
 
 
 $red: #ff4e6a !default;
 $bdcorlor: #eee !default;
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -54,6 +56,15 @@ body {
   margin: auto !important;
 }
 
+.nexmoe-py {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px 20px 20px;
+  border-radius: 20px;
+}
+
+
+
+
 #nexmoe-background {
   .nexmoe-bg {
     background-size: cover;
@@ -79,6 +90,7 @@ body {
   .nexmoe-bg {
     position: relative;
   }
+
   .mdui-appbar {
     display: block !important;
   }
@@ -124,7 +136,7 @@ body {
 
   .nexmoe-count {
     padding: 0 30px;
-    margin-bottom: 30px;
+    margin: 10px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -245,7 +257,7 @@ body {
 
         opacity: .9;
         background: $red;
-        box-shadow: 0 2px 12px $red;
+
       }
 
       i {
@@ -262,7 +274,7 @@ body {
 
   .nexmoe-widget-wrap {
     box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     margin: 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -316,7 +328,13 @@ body {
       }
 
       .links-of-author {
-        canvas, img, select, textarea, video, iframe {
+
+        canvas,
+        img,
+        select,
+        textarea,
+        video,
+        iframe {
           width: auto;
           max-width: 100%;
         }
@@ -400,6 +418,7 @@ body {
       left: 0;
     }
   }
+
   .post__toc {
     display: none;
   }
@@ -410,6 +429,7 @@ body {
     width: 260px !important;
     max-width: none;
   }
+
   .mdui-drawer-body-left {
     padding-left: 260px !important;
   }
@@ -420,7 +440,7 @@ body {
 
   .nexmoe-primary {
     box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
-    background-color: #fff;
+    //background-color: #fff;
     float: left;
     width: 100%;
     padding: 20px 20px 56px;
@@ -449,7 +469,8 @@ body {
         margin-left: 8px;
       }
 
-      .extend, .page-number {
+      .extend,
+      .page-number {
         color: #999;
         border-radius: 10px;
         width: 35px;
@@ -468,6 +489,10 @@ body {
     }
 
     .links {
+
+
+
+
       ul {
         list-style-type: none;
         padding: 0;
@@ -521,9 +546,14 @@ body {
     .nexmoe-post {
       width: 100%;
       margin-bottom: 20px;
+      box-shadow: 0 0 1rem rgba(161, 177, 204, 0.4);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 20px;
 
       article {
-        padding: 10px 0;
+        //padding: 10px 0;
+        margin-bottom: 0px;
 
         p {
           &:first-child {
@@ -543,6 +573,11 @@ body {
   }
 
   .nexmoe-post {
+    background: rgba(256, 256, 256, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
     .nexmoe-post-cover {
       width: 100%;
       position: relative;
@@ -694,7 +729,8 @@ body {
         color: $red;
       }
 
-      hr, br:last-child {
+      hr,
+      br:last-child {
         display: none;
       }
 
@@ -770,7 +806,8 @@ body {
               line-height: 0;
             }
 
-            &::before, &::after {
+            &::before,
+            &::after {
               display: table;
               content: "";
               line-height: 0;
@@ -848,7 +885,7 @@ body {
     margin: 0 -20px;
     padding: 21.5px 20px;
     text-align: center;
-    background-color: #f5f6f5;
+    //background-color: #f5f6f5;
     color: #777;
     position: absolute;
     bottom: 0;
@@ -954,6 +991,7 @@ body {
   body {
     padding-left: 80px;
   }
+
   #nexmoe-header .mdui-drawer-close {
     -webkit-transform: translateX(-160px);
     transform: translateX(-160px);
@@ -990,7 +1028,7 @@ body {
       color: #9ca2a8;
     }
 
-    .mdui-list-item-icon ~ .mdui-list-item-content {
+    .mdui-list-item-icon~.mdui-list-item-content {
       margin-left: 32px;
     }
 
@@ -1047,7 +1085,8 @@ article {
     position: relative;
     word-wrap: break-word;
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       color: $red;
     }
 
@@ -1088,14 +1127,16 @@ article {
     margin: -5px;
     max-width: calc(100% + 10px);
 
-    + .nexmoe-album {
+    +.nexmoe-album {
       margin-top: 5px;
     }
 
     border: none;
     box-shadow: none;
 
-    td, th, thead {
+    td,
+    th,
+    thead {
       border: none;
       box-shadow: none;
     }
@@ -1104,7 +1145,8 @@ article {
       background-color: transparent !important;
     }
 
-    td, th {
+    td,
+    th {
       padding: 5px;
     }
   }
@@ -1115,16 +1157,25 @@ article {
     border: 1px solid $bdcorlor;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #111;
     margin: 20px 0;
   }
 
-  h4, h5, h6 {
+  h4,
+  h5,
+  h6 {
     position: relative;
   }
 
-  h4:before, h5:before, h6:before {
+  h4:before,
+  h5:before,
+  h6:before {
     display: inline-block;
     width: 1em;
     content: '#';
@@ -1281,7 +1332,8 @@ article {
       background-color: #f8f8f8 !important;
     }
 
-    td, th {
+    td,
+    th {
       border: 1px solid $bdcorlor !important;
       padding: 13px 26px !important;
 
@@ -1298,7 +1350,8 @@ article {
     tr {
       background-color: #fff;
 
-      td:first-child, th:first-child {
+      td:first-child,
+      th:first-child {
         white-space: nowrap;
       }
 
@@ -1308,7 +1361,11 @@ article {
     }
   }
 
-  canvas, img, select, textarea, video {
+  canvas,
+  img,
+  select,
+  textarea,
+  video {
     width: auto;
     max-width: 100%;
   }
@@ -1327,7 +1384,7 @@ summary {
   }
 }
 
-details[open] > summary {
+details[open]>summary {
   .add {
     display: none;
   }
@@ -1355,17 +1412,20 @@ article {
     width: calc(33.333333333333336% - 13.333333333333334px);
   }
 
-  .catui-pic-2 p, .catui-pic-3 p {
+  .catui-pic-2 p,
+  .catui-pic-3 p {
     float: left;
     margin-right: 20px !important;
     margin-top: 0 !important;
   }
 
-  .catui-pic-2 img, .catui-pic-3 img {
+  .catui-pic-2 img,
+  .catui-pic-3 img {
     object-fit: cover;
   }
 
-  .catui-pic-2 p:after, .catui-pic-3 p:after {
+  .catui-pic-2 p:after,
+  .catui-pic-3 p:after {
     content: attr(title);
     position: absolute;
     bottom: 0;
@@ -1378,15 +1438,18 @@ article {
     pointer-events: none;
   }
 
-  .catui-pic-2 p:nth-child(2n+2), .catui-pic-3 p:nth-child(3n+3) {
+  .catui-pic-2 p:nth-child(2n+2),
+  .catui-pic-3 p:nth-child(3n+3) {
     margin-right: 0 !important;
   }
 
-  .catui-pic-2, .catui-pic-3 {
+  .catui-pic-2,
+  .catui-pic-3 {
     margin-bottom: -20px;
   }
 
-  .catui-pic-2::after, .catui-pic-3::after {
+  .catui-pic-2::after,
+  .catui-pic-3::after {
     content: "";
     clear: both;
     display: block;
@@ -1515,7 +1578,8 @@ article .mdui-btn {
   color: #fff;
   border-radius: 6px;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     background-color: $red;
     color: #fff;
   }
@@ -1665,18 +1729,23 @@ font.douyin {
 }
 
 @media screen and (max-width: 1024px) {
-  .nexmoe-bg{
+  .nexmoe-bg {
     background: #fff !important;
   }
+
   article {
     table {
-      th, td {
+
+      th,
+      td {
         padding: 5px !important;
       }
     }
 
     tr {
-      td:first-child, th:first-child {
+
+      td:first-child,
+      th:first-child {
         white-space: normal !important;
       }
     }
